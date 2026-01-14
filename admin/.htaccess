@@ -1,0 +1,16 @@
+# Redirect all admin PHP requests to React routes
+RewriteEngine On
+RewriteBase /admin/
+
+# Redirect login.php to React route
+RewriteRule ^login\.php$ /admin/login [R=301,L]
+
+# Redirect dashboard.php to React route
+RewriteRule ^dashboard\.php$ /admin/dashboard [R=301,L]
+
+# Redirect index.php to React login route
+RewriteRule ^index\.php$ /admin/login [R=301,L]
+
+# Redirect root admin path to login
+RewriteRule ^$ /admin/login [R=301,L]
+

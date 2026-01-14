@@ -1,0 +1,17 @@
+# Security for PHP API directory
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Only allow specific PHP files
+<FilesMatch "\.php$">
+    # Allow access to API files
+</FilesMatch>
+
+# Deny access to config files
+<FilesMatch "^(config\.php|database_setup\.php|add_phone_column\.php|add_progress_field\.php|create_services_table\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+

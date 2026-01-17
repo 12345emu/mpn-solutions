@@ -34,10 +34,70 @@
 .contact-hero {
   background: linear-gradient(135deg, #1f2937 0%, #111827 30%, #374151 60%, #1f2937 100%);
   color: white;
-  padding: 5rem 0;
-  text-align: center;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.page-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.page-hero-text {
+  text-align: left;
+}
+
+.page-hero-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 160px;
+}
+
+.page-hero-svg {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  opacity: 0.9;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.graphic-element {
+  animation: graphicFloat 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes graphicFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: translateY(-15px) scale(1.02);
+    opacity: 1;
+  }
 }
 
 .contact-hero::before {
@@ -64,7 +124,7 @@
   pointer-events: none;
 }
 
-.contact-hero h1 {
+.page-hero-text h1 {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -78,11 +138,11 @@
     2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.contact-hero p {
+.page-hero-text p {
   font-size: 1.25rem;
   color: #f9fafb;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 0;
   animation: fadeInUp 0.8s ease 0.2s both;
   position: relative;
   z-index: 1;
@@ -484,15 +544,32 @@
 
   .contact-hero {
     padding: 4rem 0;
+    min-height: auto;
   }
 
-  .contact-hero h1 {
+  .page-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .page-hero-text {
+    text-align: center;
+  }
+
+  .page-hero-graphic {
+    min-height: 250px;
+    order: -1;
+  }
+
+  .page-hero-text h1 {
     font-size: 2rem;
   }
 
-  .contact-hero p {
+  .page-hero-text p {
     font-size: 1.1rem;
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .contact-main {

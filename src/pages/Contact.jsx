@@ -54,9 +54,73 @@ function Contact() {
   return (
     <div className="contact-page">
       <section className="contact-hero">
-        <div className="container">
-          <h1>Get In Touch</h1>
-          <p>Ready to achieve sustainable growth? Let's discuss how MPN Solutions can help your business thrive.</p>
+        <div className="page-hero-background"></div>
+        <div className="page-hero-content">
+          <div className="page-hero-text">
+            <h1>Get In Touch</h1>
+            <p>Ready to achieve sustainable growth? Let's discuss how MPN Solutions can help your business thrive.</p>
+          </div>
+          <div className="page-hero-graphic">
+            <svg viewBox="0 0 600 400" className="page-hero-svg">
+              {/* Communication Graphics */}
+              <g className="graphic-element" style={{ animationDelay: '0s' }}>
+                <rect x="50" y="150" width="100" height="80" rx="8" fill="url(#contactCharcoalGradient)" opacity="0.8" />
+                <line x1="70" y1="170" x2="130" y2="170" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+                <line x1="70" y1="190" x2="130" y2="190" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+                <line x1="70" y1="210" x2="110" y2="210" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+                <path d="M75 220 L90 235 L115 210" stroke="url(#contactGoldGradient)" strokeWidth="3" fill="none" strokeLinecap="round" />
+              </g>
+              
+              <g className="graphic-element" style={{ animationDelay: '0.2s' }}>
+                <circle cx="250" cy="140" r="45" fill="url(#contactGoldGradient)" opacity="0.8" />
+                <path d="M250 110 L250 100 M250 170 L250 180 M220 140 L210 140 M280 140 L290 140" 
+                      stroke="url(#contactCharcoalGradient)" strokeWidth="2" opacity="0.7" />
+                <circle cx="250" cy="140" r="12" fill="url(#contactCharcoalGradient)" opacity="0.8" />
+              </g>
+              
+              <g className="graphic-element" style={{ animationDelay: '0.4s' }}>
+                <path d="M400 120 Q430 100 460 120 T520 120" stroke="url(#contactGoldGradient)" strokeWidth="4" fill="none" opacity="0.9" />
+                <circle cx="400" cy="120" r="8" fill="url(#contactGoldGradient)" />
+                <circle cx="460" cy="120" r="8" fill="url(#contactGoldGradient)" />
+                <circle cx="520" cy="120" r="8" fill="url(#contactGoldGradient)" />
+                <path d="M410 110 L420 100 L430 110" fill="url(#contactGoldGradient)" opacity="0.7" />
+              </g>
+              
+              <g className="graphic-element" style={{ animationDelay: '0.6s' }}>
+                <rect x="100" y="280" width="120" height="90" rx="8" fill="url(#contactCharcoalGradient)" opacity="0.7" />
+                <circle cx="140" cy="310" r="15" fill="url(#contactGoldGradient)" opacity="0.9" />
+                <path d="M140 295 L140 285 M140 325 L140 335 M125 310 L115 310 M155 310 L165 310" 
+                      stroke="url(#contactCharcoalGradient)" strokeWidth="2" opacity="0.6" />
+                <line x1="120" y1="340" x2="200" y2="340" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+              </g>
+              
+              <g className="graphic-element" style={{ animationDelay: '0.8s' }}>
+                <path d="M350 250 L380 300 L320 300 Z" fill="url(#contactGoldGradient)" opacity="0.9" />
+                <circle cx="350" cy="250" r="10" fill="url(#contactCharcoalGradient)" />
+                <line x1="340" y1="280" x2="360" y2="280" stroke="url(#contactCharcoalGradient)" strokeWidth="2" />
+              </g>
+              
+              <g className="graphic-element" style={{ animationDelay: '1s' }}>
+                <rect x="450" y="250" width="80" height="100" rx="6" fill="url(#contactCharcoalGradient)" opacity="0.7" />
+                <circle cx="490" cy="280" r="12" fill="url(#contactGoldGradient)" opacity="0.9" />
+                <line x1="470" y1="310" x2="510" y2="310" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+                <line x1="470" y1="330" x2="510" y2="330" stroke="url(#contactGoldGradient)" strokeWidth="2" opacity="0.6" />
+                <path d="M475 345 L490 360 L505 345" stroke="url(#contactGoldGradient)" strokeWidth="3" fill="none" strokeLinecap="round" />
+              </g>
+              
+              <defs>
+                <linearGradient id="contactGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FCD34D" />
+                  <stop offset="50%" stopColor="#F59E0B" />
+                  <stop offset="100%" stopColor="#D97706" />
+                </linearGradient>
+                <linearGradient id="contactCharcoalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#374151" />
+                  <stop offset="100%" stopColor="#1f2937" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
       </section>
 

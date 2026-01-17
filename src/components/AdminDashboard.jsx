@@ -476,7 +476,9 @@ function AdminDashboard() {
           <div className="admin-header-actions">
             <span className="admin-welcome-text">Welcome, {adminUsername}</span>
             <button className="admin-btn admin-btn-logout" onClick={handleLogout}>
-              <span className="logout-icon">🚪</span>
+              <svg className="logout-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
               <span className="logout-text">Logout</span>
             </button>
           </div>
@@ -518,28 +520,24 @@ function AdminDashboard() {
             {/* Overview Stats */}
             <div className="admin-overview-stats">
               <div className="admin-overview-stat-card">
-                <div className="admin-overview-stat-icon">📊</div>
                 <div className="admin-overview-stat-content">
                   <h3>Total Submissions</h3>
                   <div className="admin-overview-stat-number">{dashboardStats.totalSubmissions}</div>
                 </div>
               </div>
               <div className="admin-overview-stat-card">
-                <div className="admin-overview-stat-icon">📋</div>
                 <div className="admin-overview-stat-content">
                   <h3>Total Services</h3>
                   <div className="admin-overview-stat-number">{dashboardStats.totalServices}</div>
                 </div>
               </div>
               <div className="admin-overview-stat-card">
-                <div className="admin-overview-stat-icon">✅</div>
                 <div className="admin-overview-stat-content">
                   <h3>Active Services</h3>
                   <div className="admin-overview-stat-number">{dashboardStats.activeServices}</div>
                 </div>
               </div>
               <div className="admin-overview-stat-card">
-                <div className="admin-overview-stat-icon">🆕</div>
                 <div className="admin-overview-stat-content">
                   <h3>New Requests</h3>
                   <div className="admin-overview-stat-number">{dashboardStats.statusCounts?.new || 0}</div>
@@ -550,58 +548,56 @@ function AdminDashboard() {
             {/* Status Breakdown */}
             <div className="admin-dashboard-section">
               <h2>Submission Status Overview</h2>
-              <div className="admin-status-breakdown">
-                <div className="admin-status-item">
-                  <span className="admin-status-label">New</span>
-                  <div className="admin-status-bar">
-                    <div 
-                      className="admin-status-fill" 
-                      style={{ 
-                        width: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.new || 0) / dashboardStats.totalSubmissions * 100 : 0}%`,
-                        backgroundColor: '#d4edda'
-                      }}
-                    ></div>
+              <div className="admin-status-chart">
+                <div className="admin-chart-bar-container">
+                  <div className="admin-chart-bar-wrapper">
+                    <div className="admin-chart-bar-label">New</div>
+                    <div className="admin-chart-bar">
+                      <div 
+                        className="admin-chart-bar-fill" 
+                        style={{ 
+                          height: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.new || 0) / dashboardStats.totalSubmissions * 100 : 0}%`
+                        }}
+                      ></div>
+                    </div>
+                    <div className="admin-chart-bar-value">{dashboardStats.statusCounts?.new || 0}</div>
                   </div>
-                  <span className="admin-status-count">{dashboardStats.statusCounts?.new || 0}</span>
-                </div>
-                <div className="admin-status-item">
-                  <span className="admin-status-label">Read</span>
-                  <div className="admin-status-bar">
-                    <div 
-                      className="admin-status-fill" 
-                      style={{ 
-                        width: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.read || 0) / dashboardStats.totalSubmissions * 100 : 0}%`,
-                        backgroundColor: '#fff3cd'
-                      }}
-                    ></div>
+                  <div className="admin-chart-bar-wrapper">
+                    <div className="admin-chart-bar-label">Read</div>
+                    <div className="admin-chart-bar">
+                      <div 
+                        className="admin-chart-bar-fill" 
+                        style={{ 
+                          height: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.read || 0) / dashboardStats.totalSubmissions * 100 : 0}%`
+                        }}
+                      ></div>
+                    </div>
+                    <div className="admin-chart-bar-value">{dashboardStats.statusCounts?.read || 0}</div>
                   </div>
-                  <span className="admin-status-count">{dashboardStats.statusCounts?.read || 0}</span>
-                </div>
-                <div className="admin-status-item">
-                  <span className="admin-status-label">Contacted</span>
-                  <div className="admin-status-bar">
-                    <div 
-                      className="admin-status-fill" 
-                      style={{ 
-                        width: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.contacted || 0) / dashboardStats.totalSubmissions * 100 : 0}%`,
-                        backgroundColor: '#cfe2ff'
-                      }}
-                    ></div>
+                  <div className="admin-chart-bar-wrapper">
+                    <div className="admin-chart-bar-label">Contacted</div>
+                    <div className="admin-chart-bar">
+                      <div 
+                        className="admin-chart-bar-fill" 
+                        style={{ 
+                          height: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.contacted || 0) / dashboardStats.totalSubmissions * 100 : 0}%`
+                        }}
+                      ></div>
+                    </div>
+                    <div className="admin-chart-bar-value">{dashboardStats.statusCounts?.contacted || 0}</div>
                   </div>
-                  <span className="admin-status-count">{dashboardStats.statusCounts?.contacted || 0}</span>
-                </div>
-                <div className="admin-status-item">
-                  <span className="admin-status-label">Archived</span>
-                  <div className="admin-status-bar">
-                    <div 
-                      className="admin-status-fill" 
-                      style={{ 
-                        width: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.archived || 0) / dashboardStats.totalSubmissions * 100 : 0}%`,
-                        backgroundColor: '#e2e3e5'
-                      }}
-                    ></div>
+                  <div className="admin-chart-bar-wrapper">
+                    <div className="admin-chart-bar-label">Archived</div>
+                    <div className="admin-chart-bar">
+                      <div 
+                        className="admin-chart-bar-fill" 
+                        style={{ 
+                          height: `${dashboardStats.totalSubmissions > 0 ? (dashboardStats.statusCounts?.archived || 0) / dashboardStats.totalSubmissions * 100 : 0}%`
+                        }}
+                      ></div>
+                    </div>
+                    <div className="admin-chart-bar-value">{dashboardStats.statusCounts?.archived || 0}</div>
                   </div>
-                  <span className="admin-status-count">{dashboardStats.statusCounts?.archived || 0}</span>
                 </div>
               </div>
             </div>

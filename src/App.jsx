@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import { getApiBase } from './config'
-import npmLogo from './assets/npm.png'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -77,7 +76,7 @@ function App() {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
           <div className="logo">
-            <img src={npmLogo} alt="MPN Solutions" className="logo-image" />
+            <img src="/npm.jpeg" alt="MPN Solutions" className="logo-image" />
             <span className="logo-text">MPN</span>
             <span className="logo-subtitle">Solutions</span>
           </div>
@@ -323,7 +322,7 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo">
-              <img src={npmLogo} alt="MPN Solutions" className="logo-image" />
+              <img src="/npm.jpeg" alt="MPN Solutions" className="logo-image" />
               <span className="logo-text">MPN</span>
               <span className="logo-subtitle">Solutions</span>
             </div>

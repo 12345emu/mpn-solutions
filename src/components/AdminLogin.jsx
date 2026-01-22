@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getApiBase } from '../config'
-import npmLogo from '../assets/npm.png'
 import './AdminLogin.css'
 
 function AdminLogin() {
@@ -86,7 +85,7 @@ function AdminLogin() {
       <div className="admin-login-container">
         <div className="admin-login-box">
           <div className="admin-login-header">
-            <img src={npmLogo} alt="MPN Solutions" className="admin-login-logo" />
+              <img src="/npm.jpeg" alt="MPN Solutions" className="admin-login-logo" />
             <h1>MPN Solutions</h1>
             <p>Checking authentication...</p>
           </div>
@@ -99,7 +98,7 @@ function AdminLogin() {
     <div className="admin-login-container">
       <div className="admin-login-box">
         <div className="admin-login-header">
-          <img src={npmLogo} alt="MPN Solutions" className="admin-login-logo" />
+              <img src="/npm.jpeg" alt="MPN Solutions" className="admin-login-logo" />
           <h1>MPN Solutions</h1>
           <p>Admin Login</p>
         </div>

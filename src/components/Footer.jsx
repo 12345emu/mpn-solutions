@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import npmLogo from '../assets/npm.png'
 import './Footer.css'
 
 function Footer() {
@@ -8,7 +7,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <img src={npmLogo} alt="MPN Solutions" className="logo-image" />
+            <img src="/npm.jpeg" alt="MPN Solutions" className="logo-image" />
             <span className="logo-text">MPN</span>
             <span className="logo-subtitle">Solutions</span>
           </div>

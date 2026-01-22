@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { getApiBase } from '../config'
-import npmLogo from '../assets/npm.png'
 import './Navbar.css'
 
 function Navbar() {
@@ -99,9 +98,7 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="logo">
-          <img src={npmLogo} alt="MPN Solutions" className="logo-image" />
-          <span className="logo-text">MPN</span>
-          <span className="logo-subtitle">Solutions</span>
+            <img src="/npm.jpeg" alt="MPN Solutions" className="logo-image" />
         </Link>
         
         <button 

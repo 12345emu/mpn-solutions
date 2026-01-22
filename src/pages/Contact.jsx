@@ -143,8 +143,8 @@ function Contact() {
                   </div>
                   <div className="contact-card-content">
                     <h3>Email Us</h3>
-                    <p>info@mpnsolutions.com</p>
-                    <a href="mailto:info@mpnsolutions.com" className="contact-action-link">
+                    <p>mpnsolutions38@gmail.com</p>
+                    <a href="mailto:mpnsolutions38@gmail.com" className="contact-action-link">
                       Send Email
                       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -161,8 +161,8 @@ function Contact() {
                   </div>
                   <div className="contact-card-content">
                     <h3>Call Us</h3>
-                    <p>+1 (555) 123-4567</p>
-                    <a href="tel:+15551234567" className="contact-action-link">
+                    <p>+231888083259</p>
+                    <a href="tel:+231888083259" className="contact-action-link">
                       Call Now
                       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -176,16 +176,12 @@ function Contact() {
                 <h3>Business Hours</h3>
                 <div className="hours-list">
                   <div className="hours-item">
-                    <span className="hours-day">Monday - Friday</span>
-                    <span className="hours-time">9:00 AM - 6:00 PM</span>
+                    <span className="hours-day">Mon-Fri</span>
+                    <span className="hours-time">9 AM - 4 PM</span>
                   </div>
                   <div className="hours-item">
-                    <span className="hours-day">Saturday</span>
-                    <span className="hours-time">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="hours-item">
-                    <span className="hours-day">Sunday</span>
-                    <span className="hours-time">Closed</span>
+                    <span className="hours-day">Saturdays</span>
+                    <span className="hours-time">10 AM - 3 PM</span>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getApiBase } from '../config'
-import npmLogo from '../assets/npm.png'
 import './AdminDashboard.css'
 
 function AdminDashboard() {
@@ -467,7 +466,7 @@ function AdminDashboard() {
       <header className="admin-header">
         <div className="admin-header-content">
           <div className="admin-header-title">
-            <img src={npmLogo} alt="MPN Solutions" className="admin-header-logo" />
+            <img src="/npm.jpeg" alt="MPN Solutions" className="admin-header-logo" />
             <div>
               <h1>MPN Solutions</h1>
               <span className="admin-header-subtitle">Admin Dashboard</span>

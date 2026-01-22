@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getApiBase } from '../config'
-import npmLogo from '../assets/npm.png'
 import './Home.css'
 
 function Home() {
@@ -26,7 +25,7 @@ function Home() {
           <div className="hero-content">
             <div className="hero-logo-wrapper">
               <div className="hero-logo">
-                <img src={npmLogo} alt="MPN Solutions" className="hero-logo-image" />
+                    <img src="/npm.jpeg" alt="MPN Solutions" className="hero-logo-image" />
               </div>
             </div>
             <h1 className="hero-company-name">MPN Solutions</h1>

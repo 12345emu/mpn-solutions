@@ -14,3 +14,5 @@ After installation, the admin panel will be available at:
 The React admin panel replaces the PHP admin pages.
 
 
+
+

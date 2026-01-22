@@ -1,3 +1,31 @@
+# React Router - Handle all routes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Handle Angular/React Router - redirect all requests to index.html
+    # except for existing files and directories
+    
+    # If the requested file or directory exists, serve it
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # Don't rewrite API calls to PHP
+    RewriteCond %{REQUEST_URI} ^/php/
+    RewriteRule ^ - [L]
+    
+    # Don't rewrite admin PHP files (they have their own .htaccess)
+    RewriteCond %{REQUEST_URI} ^/admin/.*\.php$
+    RewriteRule ^ - [L]
+    
+    # Don't rewrite assets (images, CSS, JS files)
+    RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|ico|svg|css|js|woff|woff2|ttf|eot)$ [NC]
+    RewriteRule ^ - [L]
+    
+    # Rewrite everything else to index.html for React Router
+    RewriteRule ^ index.html [L]
+</IfModule>
+
 # Security Headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
